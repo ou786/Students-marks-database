@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Marks</title>
+</head>
+<body>
+    <h1>Add Marks</h1>
+    <form method="POST">
+        <input type="hidden" name="student_id" value="{{ student_id }}">
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+                <th>Marks Obtained</th>
+            </tr>
+            {% for i in range(len(subjects)) %}
+            <tr>
+                <td>
+                    <select name="subject">
+                        {% for subject in subjects %}
+                        <option value="{{ subject[0] }}">{{ subject[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <select name="grade">
+                        {% for grade in grades %}
+                        <option value="{{ grade[0] }}">{{ grade[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="marks">
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <input type="submit" value="Add Marks">
+    </form>
+</body>
+</html>
