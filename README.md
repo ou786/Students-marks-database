@@ -1,7 +1,5 @@
 # Students-marks-database
 
-# Student Marks Management System
-
 This is a web-based Student Marks Management System built with Flask and SQLite. It allows users to add new students, record their marks for multiple subjects, and display students with marks higher than 60%.
 
 ## Features
